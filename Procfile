@@ -1,1 +1,1 @@
-web: gunicorn NEWS-WEBSITE.wsgi
+web: gunicorn codestar.wsgi
