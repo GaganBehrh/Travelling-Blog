@@ -24,7 +24,7 @@
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                                <h2 class="card-title">Tom Exploring Switzerland</h2>
+                                <h2 class="card-title">{{post.title}}</h2>
 
                             </a>
                             <hr />
@@ -33,51 +33,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://thumbs.dreamstime.com/b/happy-travel-woman-vacation-concept-funny-traveler-enjoy-her-trip-ready-to-adventure-happy-travel-woman-vacation-concept-118679424.jpg">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                                <h2 class="card-title">Serena Exploring France </h2>
 
-                            </a>
-                            <hr />
-                            <p class="card-text text-muted h6">Dec. 5, 2022, 4:34 p.m. <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
-                        </div>
+                < {% if forloop.counter|divisibleby:3 %} </div>>
+                    <div class="row">
+                        {% endif %}
+                        {% endfor %}
+
                     </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-
             </div>
         </div>
-    </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        {% if is_paginated %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
 
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-</div>
-{%endblock%}
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+    {%endblock%}
