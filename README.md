@@ -7,6 +7,7 @@ Users want to post, read and comment on travelling stories.
 Potential features to include:
 Comments can be left on a post
 Time/Date of posting
+Sign and Sign up facilities available
 
 
 
