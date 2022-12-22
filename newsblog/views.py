@@ -4,6 +4,7 @@ from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
+from django.urls import reverse_lazy
 
 
 class PostList(generic.ListView):
@@ -12,12 +13,12 @@ class PostList(generic.ListView):
     template_name = "index.html"
     paginate_by = 6
 
-class PostUpdate(generic.UpdateView):
-    model=Post
-    fields = [
-        "title",
-        "description"
-    ]
+
+class PostView(generic.ListView):
+    model = Post
+    template_name = "post_view.html"
+    context_object_name='post_list'
+    
 
 
 
