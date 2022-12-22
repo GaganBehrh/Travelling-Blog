@@ -24,7 +24,7 @@
                                 </div>
                             </div>
                             <h2 class="card-title">{{post.title}}</h2>
-                            <a href="{% url 'post_view' %}" class="post-link">
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <button type="button" class="btn btn-primary">View</button>
                             </a>
                             <hr />
