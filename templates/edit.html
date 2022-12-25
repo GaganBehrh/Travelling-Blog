@@ -4,22 +4,22 @@
 
 <div class="container pt-5">
     <form method="post" nonvaildate>
-        {%csrf_token%}
-        {%for field in form.visible_fields%}
+        {% csrf_token %}
+        {% for field in form.visible_fields %}
         <div class="form-group">
             <label for="{{field.id_for_label}}">{{field.label}}</label>
             {{fields|add_class:'form-control'}}
-            {%for error in fields_error%}
+            {%for error in field.errors%}
             <span class="help-block">{{error}}</span>
-            {%endfor%}
+            {% endfor %}
         </div>
-        {%endfor%}
+        {% endfor %}
         <div class="form-group">
             <button type="submit" class="btn-btn-success">
-                <span class="glyphicon-glyphicon-ok"></span>Edit
+                <span class="glyphicon glyphicon-ok"></span>Edit
             </button>
             <a href="{% url 'post_view'  %}" class="btn-btn-default">Cancel</a>
         </div>
     </form>
 </div>
-{%endblock%}
+{% endblock %}
