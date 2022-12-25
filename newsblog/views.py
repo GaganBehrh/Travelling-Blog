@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404,reverse
 from django.views import generic, View
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import UpdateView, DeleteView
+
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
@@ -24,6 +25,12 @@ class EditView(UpdateView):
     model=Post
     template_name='edit.html'
     fields='__all__'
+    pk_url_kwarg='pk'
+    success_url=reverse_lazy('post_view')
+
+class Delete(DeleteView):
+    model=Post
+    template_name='delete.html'
     pk_url_kwarg='pk'
     success_url=reverse_lazy('post_view')
 

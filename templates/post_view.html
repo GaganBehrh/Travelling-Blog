@@ -31,6 +31,9 @@
                                 <a href="{% url 'edit' post.pk %}" class="post-link">
                                     <button type="button" class="btn btn-primary">Edit</button>
                                 </a>
+                                <a href="{% url 'delete' post.pk %}" class="post-link">
+                                    <button type="button" class="btn btn-primary">Delete</button>
+                                </a>
                             </div>
                             <hr />
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
