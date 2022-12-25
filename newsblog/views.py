@@ -20,6 +20,13 @@ class PostView(generic.ListView):
     context_object_name='post_list'
     
 
+class EditView(UpdateView):
+    model=Post
+    template_name='core/edit.html'
+    fields='__all__'
+    pk_url_kwarg='pk'
+    success_url=reverse_lazy('post_view')
+
 
 
 class PostDetail(View):

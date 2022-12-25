@@ -24,9 +24,14 @@
                                 </div>
                             </div>
                             <h2 class="card-title">{{post.title}}</h2>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <button type="button" class="btn btn-primary">View</button>
-                            </a>
+                            <div class="btn-grp">
+                                <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                                    <button type="button" class="btn btn-primary">View</button>
+                                </a>
+                                <a href="{% url 'edit' post.pk %}" class="post-link">
+                                    <button type="button" class="btn btn-primary">Edit</button>
+                                </a>
+                            </div>
                             <hr />
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>
