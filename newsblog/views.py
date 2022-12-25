@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404,reverse
 from django.views import generic, View
-from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic.edit import CreateView,UpdateView, DeleteView
 
 from django.http import HttpResponseRedirect
 from .models import Post
@@ -20,6 +20,13 @@ class PostView(generic.ListView):
     template_name = "post_view.html"
     context_object_name='post_list'
     
+
+class AddView(CreateView):
+    model=Post
+    template_name='add.html'
+    fields='__all__'
+    pk_url_kwarg='pk'
+    success_url=reverse_lazy('post_view')
 
 class EditView(UpdateView):
     model=Post

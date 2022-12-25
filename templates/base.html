@@ -47,7 +47,7 @@
                         <a class="nav-link" href="{% url 'post_view' %}">Manage Posts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Add New</a>
+                        <a class="nav-link" href="{% url 'add' %}">Add New</a>
                     </li>
 
                     {% else %}
@@ -61,7 +61,7 @@
                         <a class="nav-link" href="{% url 'post_view' %}">Manage Posts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Add New</a>
+                        <a class="nav-link" href="{% url 'add' %}">Add New</a>
                     </li>
                     {% endif %}
 
