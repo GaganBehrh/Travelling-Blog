@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'newsblog',
+    'widget_tweaks',
     
    
 ]

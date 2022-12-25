@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load widget tweaks%}
+{% load widget_tweaks%}
 {% block content%}
 
 <div class="container pt-5">
@@ -8,7 +8,7 @@
         {%for field in form.visible_fields%}
         <div class="form-group">
             <label for="{{field.id_for_label}}">{{field.label}}</label>
-            {{fiels|add_class:'form-control'}}
+            {{fields|add_class:'form-control'}}
             {%for error in fields_error%}
             <span class="help-block">{{error}}</span>
             {%endfor%}
@@ -18,7 +18,7 @@
             <button type="submit" class="btn-btn-success">
                 <span class="glyphicon-glyphicon-ok"></span>Edit
             </button>
-            <a href={% url post_view %} class="btn-btn-default">Cancel</a>
+            <a href="{% url 'post_view'  %}" class="btn-btn-default">Cancel</a>
         </div>
     </form>
 </div>
