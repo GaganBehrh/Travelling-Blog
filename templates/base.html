@@ -18,6 +18,7 @@
     </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+    <script src="{% static 'js/script.js' %}"></script>
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -67,7 +68,7 @@
                         <a class="nav-link" href="{% url 'add' %}">Add New</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="" id="nextdestination">Your Next travel Destination</a>
+                        <button class="btn btn-signup btn-lg" id="nextdestination">Click here </button>
                     </li>
 
                     {% endif %}
