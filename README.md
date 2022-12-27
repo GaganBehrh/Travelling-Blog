@@ -1,13 +1,41 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Add the responsive image
 
-External user’s goal:
+Looking to post your travel blog? You've come to the right place! Travel Blog is a place where you can view how other people have travelled around the world and shared their experiences.You also have the freedom of sharing and commenting on the other people experiences. And,do you have experiences that you'd like to share as well? Great news! You can create your own free account and add an unlimited number of travelling experiences and share it with the world.
 
-Users want to post, read and comment on travelling stories.
+UX
+User Stories
+Navigation: As a user I can view a navbar from every page so that I can navigate easily between pages
+Authentication - Sign up: As a user I can create a new account so that I can access all the features for signed up users
+Authentication - Sign in: As a user I can sign in to the app so that I can access functionality for logged in users
+View most recent posts: As a user I can view all the most recent posts, ordered by most recently created first so that I am up to date with the newest content
+As a user, I can search for posts with keywords, so that I can find the posts and user profiles I am most interested in.
+Edit post: As a post owner I can edit my post title and description so that I can make corrections or update my post after it was created
+Create a comment: As a logged in user I can add comments to a post so that I can share my thoughts about the post
+View comments: As a user I can read comments on posts so that I can read what other users think about the posts
 
-Potential features to include:
-Comments can be left on a post
-Time/Date of posting
-Sign and Sign up facilities available
+
+
+Existing Features
+Features Left to Implement
+Technologies Used
+
+Front-End Technologies
+Back-End Technologies
+Testing
+
+Validators
+Compatibility
+Known Issues
+Deployment
+
+Local Deployment
+Remote Deployment
+Credits
+
+Content
+Media
+Code
+Acknowledgements
 
 
 
