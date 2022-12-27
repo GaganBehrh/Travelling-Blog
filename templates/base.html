@@ -18,7 +18,7 @@
     </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <script src="{% static 'js/script.js' %}"></script>
+
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -68,12 +68,10 @@
                     {% endif %}
 
                 </ul>
-                <a class="nav-item">
-                    <button class="btn btn-signup btn-lg" id="nextdestination">Click here for adventure</button>
-                </a>
-                <!-- <span class="navbar-text text-muted">
+
+                <span class="navbar-text text-muted">
                     adventures of a traveller
-                </span>-->
+                </span>
             </div>
         </div>
     </nav>
@@ -105,13 +103,8 @@
             <i class="fab fa-instagram-square ms-3"></i>
             <i class="fab fa-youtube-square ms-3"></i></p>
     </footer>
-    <script>
-        setTimeout(function () {
-            let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 2500);
-    </script>
+    <script src="{% static 'js/script.js' %}"></script>
+
 </body>
 
 </html>
