@@ -1,0 +1,1 @@
+nextdestination = document.getElementById("nextdestination");
