@@ -51,6 +51,7 @@ CSS
 jQuery 
 Heroku
 Python
+Django
 SQL
 
 Agile Method:

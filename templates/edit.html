@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load widget_tweaks%}
 {% block content%}
-{% load crispy_forms_tags %}
+
 
 <div class="container pt-5">
     <form method="post" novaildate>
@@ -19,7 +19,7 @@
             <button type="submit" class="btn btn-success">
                 <span class="glyphicon glyphicon-ok"></span>Edit
             </button>
-            <a href="{% url 'post_view'  %}" class="btn-btn-default">Cancel</a>
+            <a href="{% url 'post_view'  %}" class="btn btn-success">Cancel</a>
         </div>
     </form>
 </div>
