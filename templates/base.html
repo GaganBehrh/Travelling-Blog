@@ -50,10 +50,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'add' %}">Add New</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Your Next travel Destination</a>
-                    </li>
-
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
@@ -67,16 +63,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'add' %}">Add New</a>
                     </li>
-                    <li class="nav-item">
-                        <button class="btn btn-signup btn-lg" id="nextdestination">Click here </button>
-                    </li>
+
 
                     {% endif %}
 
                 </ul>
-                <span class="navbar-text text-muted">
+                <a class="nav-item">
+                    <button class="btn btn-signup btn-lg" id="nextdestination">Click here for adventure</button>
+                </a>
+                <!-- <span class="navbar-text text-muted">
                     adventures of a traveller
-                </span>
+                </span>-->
             </div>
         </div>
     </nav>
