@@ -8,7 +8,7 @@ if os.path.isfile('env.py'):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR= os.path.join(BASE_DIR, 'templates')
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -19,7 +19,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['newsblog12.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['newsblog12.herokuapp.com', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://8000-gaganbehrh-newswebsite-yefpy2oyxyh.ws-eu80.gitpod.io']
 
 
@@ -47,21 +47,21 @@ INSTALLED_APPS = [
    
 ]
 
-SITE_ID=1
-LOGIN_REDIRECT_URL='/'
-LOGOUT_REDIRECT_url='/'
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_url = '/'
 
-MESSAGE_TAGS={
-    messages.DEBUG:'alert-info',
-    messages.INFO:'alert-info',
-    messages.SUCCESS:'alert.success',
-    messages.WARNING:'alert-warning',
-    messages.ERROR:'alert-danger',
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert.success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
 
 
 }
 
-crispy_template_pack='bootstrap4'
+crispy_template_pack = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -135,11 +135,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS= [os.path.join(BASE_DIR,'static')]
-STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE ='cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 
