@@ -69,6 +69,8 @@ Validators
 HTML
 
 W3C HTML Validator -
+I used This HTML validator to ensure my code was legal.
+The only warnings were when the validator failed to recognise the Django template tags.
 CSS
 
 W3C CSS Validator - No errors found
