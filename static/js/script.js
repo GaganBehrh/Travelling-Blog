@@ -11,6 +11,7 @@ function myFunction() {
     }
 
 }*/
+import 'bootstrap/js/dist/util';
 setTimeout(function () {
     let messages = document.getElementById('msg');
     let alert = new bootstrap.Alert(messages);
