@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404,reverse
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.views.generic.edit import CreateView,UpdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from django.http import HttpResponseRedirect
 from .models import Post
@@ -18,29 +18,30 @@ class PostList(generic.ListView):
 class PostView(generic.ListView):
     model = Post
     template_name = "post_view.html"
-    context_object_name='post_list'
+    context_object_name = 'post_list'
     
 
 class AddView(CreateView):
-    model=Post
-    template_name='add.html'
-    fields='__all__'
-    pk_url_kwarg='pk'
-    success_url=reverse_lazy('post_view')
+    model = Post
+    template_name = 'add.html'
+    fields = '__all__'
+    pk_url_kwarg = 'pk'
+    success_url = reverse_lazy('post_view')
+
 
 class EditView(UpdateView):
-    model=Post
-    template_name='edit.html'
-    fields='__all__'
-    pk_url_kwarg='pk'
-    success_url=reverse_lazy('post_view')
+    model = Post
+    template_name = 'edit.html'
+    fields = '__all__'
+    pk_url_kwarg = 'pk'
+    success_url = reverse_lazy('post_view')
+
 
 class Delete(DeleteView):
-    model=Post
-    template_name='delete.html'
-    pk_url_kwarg='pk'
-    success_url=reverse_lazy('post_view')
-
+    model = Post
+    template_name = 'delete.html'
+    pk_url_kwarg = 'pk'
+    success_url = reverse_lazy('post_view')
 
 
 class PostDetail(View):
@@ -96,6 +97,8 @@ class PostDetail(View):
                 "liked": liked
             },
         )
+
+
 class PostLike(View):
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
