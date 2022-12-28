@@ -71,9 +71,10 @@ HTML
 W3C HTML Validator -
 CSS
 
-W3C CSS Validator - I am using :root{} variables in my CSS, which isn't [yet?] recognized by the validator. This is causing 
-
-JShint
+W3C CSS Validator - No errors found
+image.png
+JShint: only warnings found
+/workspace/News-Website/static/media/jshint.PNG
 
 Python
 
