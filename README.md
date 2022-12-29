@@ -13,7 +13,7 @@ As a user I can create a new account so that I can access all the features for s
 As a user I can sign in to the app so that I can access functionality for logged in users
 
 View most recent posts: 
-As a user I can view all the most recent posts, ordered by most recently created first so that I am up to date with the newest content
+As a user I can view all the most recent posts
 
 
 Edit post: 
@@ -39,17 +39,16 @@ Users can easily log out of their account with the click of a button.
 Users can easily log out of their account with the click of a button.
 
 ### [CRUD]Read functionality
-Travelling Posts can be viewed by going on the Manage Posts button on the and clicking on View button on the individul post
-Search Desserts
+Travelling Posts can be viewed by going on the Manage Posts button on the navigation bar and clicking on View button on the individul post
 
-### Add a Recipe
+### Add a post
 [CRUD] Create or 'add' a new travelling experience by clicking on the Add New button. 
 
 ### Update a Travelling Experience
-[CRUD] Update or 'edit' their own travellibg experience on this page.
+[CRUD] Update or 'edit' their own travelling experience on this page.
 
 ### Delete a Travelling Experience
-[CRUD] Delete or 'remove' a user's own travelling experience by clicking on the Delete button. 4
+[CRUD] Delete or 'remove' a  travelling experience by clicking on the Delete button. 
 
 Features Left to Implement..........
 
@@ -58,14 +57,15 @@ Features Left to Implement..........
 ## Technologies Used
 HTML 
 CSS 
-jQuery 
+javascript
 Heroku
 Python
 Django
 SQL
 
 ## Agile Method:
-The agile Methodology was used and different user stories were created using Kanban board....put the pic here
+The agile Methodology was used and different user stories were created using Kanban board and implemented for the project....put the pic here
+image.png
 
 ## Validators
 
@@ -73,12 +73,13 @@ The agile Methodology was used and different user stories were created using Kan
 I used This HTML validator to ensure my code was legal.
 The only warnings were when the validator failed to recognise the Django template tags.
 
-#### W3C CSS Validator - No errors found
-image.png
-#### JShint: only warnings found
-/workspace/News-Website/static/media/jshint.PNG
+#### W3C CSS Validator - 
+No errors found
 
-#### PEP8 Online: No errors found
+#### JShint: only warnings found
+
+#### PEP8 Online: 
+No errors found
 
 ## Acknowledgements and Credits
 Mentor and Tutor support
