@@ -6,7 +6,7 @@ Looking to post your travel blog? You've come to the right place! Travel Blog is
 ## User Stories
 Navigation: As a user I can view a navbar from every page so that I can navigate easily between pages
 
-###  Sign up: 
+Sign up: 
 As a user I can create a new account so that I can access all the features for signed up users
 
  Sign in: 
@@ -25,7 +25,8 @@ As a logged in user I can add comments to a post so that I can share my thoughts
 View comments: 
 As a user I can read comments on posts so that I can read what other users think about the posts
 
-## Wireframe: Pen and paper
+## Wireframe: 
+Pen and paper
 
 ## Existing Features
 ### Register Account
@@ -44,7 +45,7 @@ Search Desserts
 ### Add a Recipe
 [CRUD] Create or 'add' a new travelling experience by clicking on the Add New button. 
 
-#### Update a Travelling Experience
+### Update a Travelling Experience
 [CRUD] Update or 'edit' their own travellibg experience on this page.
 
 ### Delete a Travelling Experience
@@ -67,17 +68,17 @@ SQL
 The agile Methodology was used and different user stories were created using Kanban board....put the pic here
 
 ## Validators
-Validators
-### W3C HTML Validator -
+
+#### W3C HTML Validator -
 I used This HTML validator to ensure my code was legal.
 The only warnings were when the validator failed to recognise the Django template tags.
 
-### W3C CSS Validator - No errors found
+#### W3C CSS Validator - No errors found
 image.png
-### JShint: only warnings found
+#### JShint: only warnings found
 /workspace/News-Website/static/media/jshint.PNG
 
-### PEP8 Online: No errors found
+#### PEP8 Online: No errors found
 
 ## Acknowledgements and Credits
 Mentor and Tutor support
