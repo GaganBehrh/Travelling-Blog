@@ -61,7 +61,7 @@ javascript
 Heroku
 Python
 Django
-SQL
+ElephantSQL
 
 ## Agile Method:
 The agile Methodology was used and different user stories were created using Kanban board and implemented for the project....put the pic here
