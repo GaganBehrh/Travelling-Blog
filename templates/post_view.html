@@ -42,12 +42,13 @@
                     </div>
                 </div>
 
-                {% if forloop.counter|divisibleby:3 %} </div>>
+                {% if forloop.counter|divisibleby:4 %} </div>
             <div class="row">
                 {% endif %}
                 {% endfor %}
 
             </div>
+
         </div>
     </div>
     {% if is_paginated %}

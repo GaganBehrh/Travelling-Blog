@@ -4,7 +4,7 @@
 {% load crispy_forms_tags %}
 
 <div class="container pt-5">
-    <form method="post" novaildate>
+    <form method="post" enctype='multipart/form-data'>
         {% csrf_token %}
         {% for field in form.visible_fields %}
         <div class="form-group">
@@ -19,7 +19,7 @@
             <button type="submit" class="btn btn-success">
                 <span class="glyphicon glyphicon-ok"></span>Edit
             </button>
-            <a href="{% url 'post_view'  %}" class="btn btn-success">Cancel</a>
+            <a href="{% url 'post_view'%}" class="btn btn-success">Cancel</a>
         </div>
     </form>
 </div>
