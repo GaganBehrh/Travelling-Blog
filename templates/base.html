@@ -92,7 +92,13 @@
             <i class="fab fa-instagram-square ms-3"></i>
             <i class="fab fa-youtube-square ms-3"></i></p>
     </footer>
-    <script type="module" src="{% static 'js/script.js' %}"></script>
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 1500);
+    </script>
 </body>
 
 </html>

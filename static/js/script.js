@@ -10,10 +10,11 @@ function myFunction() {
         alert("You are going to Germany");
     }
 
-}*/
+}
 import 'bootstrap';
 setTimeout(function () {
     let messages = document.getElementById('msg');
     let alert = new bootstrap.Alert(messages);
     alert.close();
 }, 250);
+*/
