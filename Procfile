@@ -1,3 +1,3 @@
-web: node server.js
+web: gunicorn codestar.wsgi
 
 
