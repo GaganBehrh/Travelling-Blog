@@ -16,7 +16,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = FALSE
+
+X_Frame_Options = 'SAMEORIGIN'
 
 
 ALLOWED_HOSTS = ['newsblog12.herokuapp.com', 'localhost']
