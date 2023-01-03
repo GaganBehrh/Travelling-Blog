@@ -9,11 +9,10 @@ Navigation: As a user I can view a navbar from every page so that I can navigate
 Sign up: 
 As a user I can create a new account so that I can access all the features for signed up users
 
- Sign in: 
+Sign in: 
 As a user I can sign in to the app so that I can access functionality for logged in users
 View most recent posts: 
 As a user I can view all the most recent posts
-
 
 Edit post: 
 As a post owner I can edit my post title and description so that I can make corrections or update my post after it was created
@@ -29,14 +28,14 @@ Pen and paper
 
 ## Existing Features
 ### Register Account
-Anybody can register for free and create their own unique account.
+Anybody can register for free and create their own unique account.![SignUp](static/media/SignUp.PNG)
 
 ### Log In to Account
-Users can easily log out of their account with the click of a button.
+Users can easily log out of their account with the click of a button.![Alt text](static/media/Signin.PNG)
 
 ### Log Out of Account
 Users can easily log out of their account with the click of a button.
-
+![CRUD functionality](static/media/CRUD.PNG)
 ### [CRUD]Read functionality
 Travelling Posts can be viewed by going on the Manage Posts button on the navigation bar and clicking on View button on the individul post
 
