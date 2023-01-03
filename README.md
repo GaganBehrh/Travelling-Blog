@@ -1,4 +1,4 @@
-Add the responsive image
+[Image describing the resposiveness](static/media/Responsive.PNG)
 
 Looking to post your travel blog? You've come to the right place! Travel Blog is a place where you can view how other people have travelled around the world and shared their experiences.You also have the freedom of sharing and commenting on the other people experiences. And,do you have experiences that you'd like to share as well? Great news! You can create your own free account and add an unlimited number of travelling experiences and share it with the world.
 
@@ -11,7 +11,6 @@ As a user I can create a new account so that I can access all the features for s
 
  Sign in: 
 As a user I can sign in to the app so that I can access functionality for logged in users
-![Alt text](static/media/css.PNG)
 View most recent posts: 
 As a user I can view all the most recent posts
 
@@ -64,8 +63,8 @@ Django
 ElephantSQL
 
 ## Agile Method:
-The agile Methodology was used and different user stories were created using Kanban board and implemented for the project....put the pic here
-image.png
+The agile Methodology was used and different user stories were created using Kanban board and implemented for the project....put the pic here!
+[AKanban project image](static/media/Kanban%20project.PNG)
 
 ## Validators
 
@@ -75,6 +74,7 @@ The only warnings were when the validator failed to recognise the Django templat
 
 #### W3C CSS Validator - 
 No errors found
+
 
 #### JShint: only warnings found
 
