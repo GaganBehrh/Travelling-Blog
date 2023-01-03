@@ -24,8 +24,11 @@ View comments:
 As a user I can read comments on posts so that I can read what other users think about the posts
 
 ## Wireframe: 
-Pen and paper
-
+Mockups were designed using Adobe XD
+![Alt text](static/media/Mockup1.PNG)
+![Alt text](static/media/Mockup2.PNG)
+![Alt text](static/media/Mockup3.PNG)
+![Alt text](static/media/Mockup4.PNG)
 ## Existing Features
 ### Register Account
 Anybody can register for free and create their own unique account.![SignUp](static/media/SignUp.PNG)
@@ -50,10 +53,7 @@ Travelling Posts can be viewed by going on the Manage Posts button on the naviga
 [CRUD] Delete or 'remove' a  travelling experience by clicking on the Delete button. 
 
 ### Detailed view of each post can also be viewed!
-[Detail of individual post](static/media/PostDetail.PNG)
-
-
-
+![Detail of individual post](static/media/PostDetail.PNG)
 
 
 ## Technologies Used
