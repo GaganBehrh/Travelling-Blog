@@ -87,40 +87,42 @@ No errors found
 
 ## Testing of user stories
 ## User Stories
-Test :Navigation: As a user I can view a navbar from every page so that I can navigate easily between pages
+ 
+Navigation Test: As a user I can view a navbar from every page so that I can navigate easily between pages
+
 Result: Pass, A navigation bar was found
 
-Sign up: 
+Sign up Test: 
 As a user I can create a new account so that I can access all the features for signed up users
 
 Result: Pass, A sign up page was found
 
 
-Sign in: 
+Sign in Test: 
 As a user I can sign in to the app so that I can access functionality for logged in users
 
 Result: Pass, A sign in page was found
 
 
-View most recent posts: 
+View most recent posts Test: 
 As a user I can view all the most recent posts
 
 Result: Pass, A view button under "Manage Posts"on each individual post was found 
 
 
-Edit post: 
+Edit post Test: 
 As a post owner I can edit my post title and description so that I can make corrections or update my post after it was created
 
 Result: Pass, An Edit button under "Manage Posts"on each individual post was found
 
 
-Post a comment: 
+Post a comment Test: 
 As a logged in user I can add comments to a post so that I can share my thoughts about the post
 
 Result: Pass, A comment box was found on each of the post detail view through which you can add the comments
 
 
-View comments: 
+View comments v: 
 As a user I can read comments on posts so that I can read what other users think about the posts
 
 Result: Pass, A comment section was found on each of the post detail view  where the posted comments can be found
