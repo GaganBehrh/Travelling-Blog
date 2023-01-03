@@ -11,7 +11,7 @@ As a user I can create a new account so that I can access all the features for s
 
  Sign in: 
 As a user I can sign in to the app so that I can access functionality for logged in users
-
+![Alt text](static/media/css.PNG)
 View most recent posts: 
 As a user I can view all the most recent posts
 
