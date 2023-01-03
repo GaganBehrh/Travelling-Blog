@@ -1,4 +1,4 @@
-[Image describing the resposiveness](static/media/Responsive.PNG)
+[!Image describing the resposiveness](static/media/Responsive.PNG)
 
 Looking to post your travel blog? You've come to the right place! Travel Blog is a place where you can view how other people have travelled around the world and shared their experiences.You also have the freedom of sharing and commenting on the other people experiences. And,do you have experiences that you'd like to share as well? Great news! You can create your own free account and add an unlimited number of travelling experiences and share it with the world.
 
@@ -64,7 +64,7 @@ ElephantSQL
 
 ## Agile Method:
 The agile Methodology was used and different user stories were created using Kanban board and implemented for the project....put the pic here!
-[A Kanban project image](static/media/Kanban%20project.PNG)
+[!A Kanban project image](static/media/Kanban%20project.PNG)
 
 ## Validators
 
