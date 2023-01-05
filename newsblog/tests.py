@@ -8,5 +8,4 @@ from newsblog.views import PostView
 class TestUrls(SimpleTestCase):
     def test_post(self):
         url = reverse('post_view')
-        print(resolve(url))
-        self.assertEquals(resolve(url).func, views.PostView)
+        self.assertEquals(resolve(url).func.view_class, PostView)
