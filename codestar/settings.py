@@ -22,7 +22,7 @@ X_Frame_Options = 'SAMEORIGIN'
 
 
 ALLOWED_HOSTS = ['newsblog12.herokuapp.com', 'localhost']
-CSRF_TRUSTED_ORIGINS = ['https://8000-gaganbehrh-newswebsite-yefpy2oyxyh.ws-eu80.gitpod.io']  # noqa
+CSRF_TRUSTED_ORIGINS = ['https://8000-gaganbehrh-newswebsite-yefpy2oyxyh.ws-eu81.gitpod.io']  # noqa
 
 
 # Application definition
