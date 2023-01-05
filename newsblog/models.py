@@ -49,3 +49,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class TestCalculator(models.Model):
+    number_of_people = models.IntegerField(default=0) 

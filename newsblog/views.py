@@ -43,13 +43,6 @@ class Delete(DeleteView):
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('post_view')
 
-class TestCalculatorView(CreateView):
-    model = Post
-    template_name = 'testcalculator.html'
-    fields = ['number_of_people']
-    success_url = reverse_lazy('post_view')
-
-
 
 class PostDetail(View):
 

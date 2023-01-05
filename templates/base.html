@@ -53,9 +53,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'add' %}">Add New</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'add' %}" id="tripCostCalulator">Trip Cost Calculator</a>
-                    </li>
                     {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
@@ -93,16 +90,22 @@
             <i class="fab fa-youtube-square ms-3"></i></p>
     </footer>
     <script>
-        setTimeout(function () {
+        setTimeout(function popmessage() {
             let messages = document.getElementById('msg');
             let alert = new bootstrap.Alert(messages);
             alert.close();
         }, 1500);
 
-        let = document.getElementById('tripCostCalulator');
-        tripCostCalulator.onclick = function () {
-
-        };
+        function testpopmessage() {
+            // Verify error output:
+            try {
+                assert.strictEqual("You are signed in", messages);
+                console.log('Passed.');
+            } catch (err) {
+                console.log('Failed.');
+            }
+            testpopmessage();
+        }
     </script>
 </body>
 
