@@ -9,5 +9,5 @@ urlpatterns = [
     path('delete/<int:pk>', views.Delete.as_view(), name='delete'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
-    
+     
 ]
