@@ -27,6 +27,14 @@ class AddView(CreateView):
     fields = '__all__'
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('post_view')
+   
+   
+class TripCalculatorView(CreateView):
+    model = Post
+    template_name = 'tripcalculator.html'
+    fields = '__all__'
+    pk_url_kwarg = 'pk'
+    success_url = reverse_lazy('tripcalculator')
 
 
 class EditView(UpdateView):

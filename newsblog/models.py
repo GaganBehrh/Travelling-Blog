@@ -51,5 +51,5 @@ class Comment(models.Model):
         return f"Comment {self.body} by {self.name}"
 
 
-class TestCalculator(models.Model):
+class TripCalculator(models.Model):
     number_of_people = models.IntegerField(default=0) 
