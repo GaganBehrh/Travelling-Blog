@@ -1,4 +1,4 @@
-let numberofdays = document.getElementById("numberofdays");
+let numberofdays = document.getElementById("num").value;
 console.log(numberofdays);
 
 function addition() {
