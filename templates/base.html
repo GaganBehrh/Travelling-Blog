@@ -54,7 +54,7 @@
                         <a class="nav-link" href="{% url 'add' %}">Add New</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'add' %}">Trip Cost Calculator</a>
+                        <a class="nav-link" href="{% url 'add' %}" id="tripCostCalulator">Trip Cost Calculator</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -98,6 +98,11 @@
             let alert = new bootstrap.Alert(messages);
             alert.close();
         }, 1500);
+
+        let = document.getElementById('tripCostCalulator');
+        tripCostCalulator.onclick = function () {
+
+        };
     </script>
 </body>
 

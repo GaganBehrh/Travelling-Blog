@@ -11,10 +11,7 @@ class TestUrls(SimpleTestCase):
     def test_add_view(self):
         url = reverse('add')
         self.assertEquals(resolve(url).func.view_class, AddView)
-    
-    #def test_edit_view(self):
-     #   url = reverse('edit', args=['some-pk'])
-      #  self.assertEquals(resolve(url).func.view_class, EditView)
+
     
     def test_post_detail_view(self):
         url = reverse('post_detail', args=['some-slug'])
