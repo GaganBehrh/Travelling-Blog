@@ -1,11 +1,8 @@
-let numberofdays = document.getElementById("numberofdays").value;
+let numberofdays = document.getElementById("numberofdays");
+console.log(numberofdays);
 
 function addition() {
-    if (numberofdays === 5)
-        alert(500);
-    else return (1000);
-
-
+    alert(numberofdays * 1000);
 }
 
 // module.exports = addition;
