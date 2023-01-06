@@ -1,17 +1,17 @@
-/*let numberofdays = document.getElementById("num");
-console.log(numberofdays.value);*/
+let submit = document.getElementById("submit");
 
 function addition() {
-    let numberofdays = document.getElementById("num");
-    console.log(numberofdays.value);
-    alert(numberofdays * 1000);
+    let numberofdays = document.getElementById("num").value;
+    console.log(numberofdays);
+    console.log(numberofdays.value * 1000);
 }
-addition();
+submit.addEventListener("click", addition)
+console.log(numberofdays.value);
 
-function handleSubmit(event) {
+/*function handleSubmit(event) {
     event.preventDefault();
     /*let cityentered=document.getElementById("cityentered");
     search(cityentered.value);*/
-}
+
 
 // module.exports = addition;
