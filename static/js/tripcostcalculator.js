@@ -1,15 +1,18 @@
 let submit = document.getElementById("submit");
+const numberofdays = document.getElementById("num");
+console.log(numberofdays);
+// const value = numberofdays.value;
 
-let numberofdays = document.getElementById("num").value;
 
 function addition() {
-    console.log(numberofdays);
-    console.log(numberofdays * 1000);
-    alert(numberofdays * 1000);
-    return (numberofdays);
+    let value = numberofdays.value;
+    console.log(value);
+    console.log(value * 1000);
+    alert("You will pay " + value * 1000 + " for this trip");
+    return (value * 1000);
 }
-submit.addEventListener("click", addition)
-console.log(numberofdays);
+submit.addEventListener("click", addition, false)
+console.log(value);
 
 /*function handleSubmit(event) {
     event.preventDefault();
