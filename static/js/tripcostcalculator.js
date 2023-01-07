@@ -4,11 +4,14 @@ console.log(numberofdays);
 // const value = numberofdays.value;
 
 
-function addition() {
+function addition(event) {
+    event.preventDefault();
     let value = numberofdays.value;
     console.log(value);
     console.log(value * 1000);
-    alert("You will pay " + value * 1000 + " for this trip");
+    //alert("You will pay " + value * 1000 + " for this trip");
+    document.getElementById("par").innerHTML = "You will pay " + value * 1000 + " for this trip";
+
     return (value * 1000);
 }
 submit.addEventListener("click", addition, false)
