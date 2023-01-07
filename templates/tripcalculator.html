@@ -3,23 +3,23 @@
 {% block content%}
 {% load crispy_forms_tags %}
 
-<body>
-    <div class="container pt-5">
-        <form method="post" enctype='multipart/form-data'>
-            {% csrf_token %}
 
-            <div class="form-group row">
-                <label for="num">Enter the number of days</label> <input type="number" id="num">
-            </div>
+<div class="container pt-5">
+    <form method="post" enctype='multipart/form-data'>
+        {% csrf_token %}
 
-            <div class="form-group">
-                <button type="submit" class="btn btn-success" id="submit">
-                    <span class="glyphicon glyphicon-ok"></span>Submit
-                </button>
-                <a href="{% url 'post_view'%}" class="btn btn-success">Cancel</a>
-            </div>
-        </form>
-    </div>
-    <script src="../static/js/tripcostcalculator.js"></script>
-</body>
+        <div class="form-group row">
+            <label for="num">Enter the number of days</label> <input type="number" id="num">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-success" id="submit">
+                <span class="glyphicon glyphicon-ok"></span>Submit
+            </button>
+            <a href="{% url 'post_view'%}" class="btn btn-success">Cancel</a>
+        </div>
+    </form>
+</div>
+
+
 {% endblock %}
