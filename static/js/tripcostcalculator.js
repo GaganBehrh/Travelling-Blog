@@ -11,7 +11,6 @@ function addition(event) {
     console.log(value * 1000);
     //alert("You will pay " + value * 1000 + " for this trip");
     document.getElementById("par").innerHTML = "You will pay " + value * 1000 + " for this trip";
-
     return (value * 1000);
 }
 submit.addEventListener("click", addition, false)
