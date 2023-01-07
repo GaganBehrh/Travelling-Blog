@@ -1,8 +1,12 @@
-const addition = require("../tripcostcalculator");
-describe("Calculator", () => {
-    describe("Addition function", () => {
-        test("should return number of days * 1000", () => {
-            expect(addition()).toBe(5000);
-        });
+const buttonClick = require("../button");
+beforeAll(() => {
+    document.body.innerHTML = "<p id='par'></p>";
+});
+
+describe("DOM tests", () => {
+    test("Expects content to change", () => {
+        buttonClick();
+        expect(document.getElementById("par")
+            .innerHTML).toEqual("You Clicked");
     });
 });
