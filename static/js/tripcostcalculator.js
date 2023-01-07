@@ -14,12 +14,3 @@ function addition(event) {
     return (value * 1000);
 }
 submit.addEventListener("click", addition, false)
-console.log(value);
-
-/*function handleSubmit(event) {
-    event.preventDefault();
-    /*let cityentered=document.getElementById("cityentered");
-    search(cityentered.value);*/
-
-
-// module.exports = addition;

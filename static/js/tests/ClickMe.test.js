@@ -1,5 +1,4 @@
 const buttonClick = require("../ClickMe");
-
 beforeAll(() => {
     document.body.innerHTML = "<p id='par'></p>";
 });
