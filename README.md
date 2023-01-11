@@ -70,6 +70,10 @@ ElephantSQL
 The agile Methodology was used and different user stories were created using Kanban board and implemented for the project....put the pic here!
 ![A Kanban project image](static/media/Kanban%20project.PNG)
 
+### Model
+Here is the model we used
+![Model](static/media/Model.PNG)
+
 ## Validators
 
 #### W3C HTML Validator -
