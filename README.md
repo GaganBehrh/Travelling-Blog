@@ -1,6 +1,6 @@
 ![Image describing the resposiveness](static/media/Responsive.PNG)
 
-Looking to post your travel blog? You've come to the right place! Travel Blog is a place where you can view how other people have travelled around the world and shared their experiences.You also have the freedom of sharing and commenting on the other people experiences. And,do you have experiences that you'd like to share as well? Great news! You can create your own free account and add an unlimited number of travelling experiences and share it with the world.
+Looking to post your travel blog? You've come to the right place! Travel Blog is a place where you can view how other people have travelled around the world and shared their experiences.You also have the freedom of sharing and commenting on the other people experiences. And,do you have experiences that you'd like to share as well? Great news! You can create your own free account and add an unlimited number of travelling experiences and share it with the world.This website is also responsive
 
 # UX
 ## User Stories
@@ -126,6 +126,13 @@ View comments v:
 As a user I can read comments on posts so that I can read what other users think about the posts
 
 Result: Pass, A comment section was found on each of the post detail view  where the posted comments can be found
+
+## Javascript and Python testing
+Unit tests were written for both Python and Js 
+Python: Unit testw were writteh to test the url of different views 
+Javascript: Unit tests were written to test the next travel destionation page On Tripcostcalculator page. 
+
+Result:These tests were successful.
 
 ## Acknowledgements and Credits
 Mentor and Tutor support
