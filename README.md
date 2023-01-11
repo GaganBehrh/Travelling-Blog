@@ -129,7 +129,9 @@ Result: Pass, A comment section was found on each of the post detail view  where
 
 ## Javascript and Python testing
 Unit tests were written for both Python and Js 
-Python: Unit testw were writteh to test the url of different views 
+
+Python: Unit tests were written to test the url of different views 
+
 Javascript: Unit tests were written to test the next travel destionation page On Tripcostcalculator page. 
 
 Result:These tests were successful.
