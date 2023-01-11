@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-from newsblog.views import PostView, AddView, EditView, Delete,PostDetail, PostLike
+from newsblog.views import PostView, AddView, EditView, PostDetail, PostLike
 
 
 class TestUrls(SimpleTestCase):
@@ -12,7 +12,6 @@ class TestUrls(SimpleTestCase):
         url = reverse('add')
         self.assertEquals(resolve(url).func.view_class, AddView)
 
-    
     def test_post_detail_view(self):
         url = reverse('post_detail', args=['some-slug'])
         self.assertEquals(resolve(url).func.view_class, PostDetail)
