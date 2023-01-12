@@ -167,7 +167,7 @@ After cloning the repo please run the following command to include all the necce
 
 pip install -r requirements.txt
 
-and include the env.py file whicn should look like this and the user has to fill in these values
+and include the env.py file which should look like this and the user has to fill in these values
 
 ![env.py sample](static/media/env.py%20sample.PNG)
 ### remote Heroku Deployment:
@@ -189,7 +189,8 @@ Navigate to the Settings tab on the top horizontal bar, we will be adding the re
 Click the 'Reveal Config Vars' button and add the below variables:
 ![Heroku parameters](static/media/Heroku%20param.PNG)
 
-Put in your own value for these parameters
+You can deploy it using the Deploy option and carry out the build like this
+![Heroku Deployment](static/media/Heroku%20Deployment.PNG)
 
 
 
