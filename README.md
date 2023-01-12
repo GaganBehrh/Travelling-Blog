@@ -84,7 +84,8 @@ The only warnings were when the validator failed to recognise the Django templat
 No errors found
 
 
-#### JShint: only warnings found
+#### JShint: 
+only warnings found
 
 #### PEP8 Online: 
 No errors found
