@@ -67,11 +67,11 @@ Django,
 ElephantSQL
 
 ## Agile Method:
-The agile Methodology was used and different user stories were created using Kanban board and implemented for the project....put the pic here!
+The agile Methodology was used and different user stories were created using Kanban board and implemented for the project.
 ![A Kanban project image](static/media/Kanban%20project.PNG)
 
 ### Model for project
-Here is the model we used
+Here is the model I used
 ![Model](static/media/Model.PNG)
 
 ## Validators
