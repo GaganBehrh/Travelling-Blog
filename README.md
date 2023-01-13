@@ -41,6 +41,7 @@ Users can easily log out of their account with the click of a button.![Alt text]
 Users can easily log out of their account with the click of a button.
 ### CRUD functionality
 ![CRUD functionality](static/media/CRUD.PNG)
+
 ### [CRUD]Read functionality
 Travelling Posts can be viewed by going on the Manage Posts button on the navigation bar and clicking on View button on the individual post
 
