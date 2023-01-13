@@ -193,8 +193,6 @@ You can deploy it using the Deploy option and carry out the build like this
 ![Heroku Deployment](static/media/Heroku%20Deployment.PNG)
 
 
-
-
 ## Acknowledgements and Credits
 Mentor and Tutor support
 Media Info
