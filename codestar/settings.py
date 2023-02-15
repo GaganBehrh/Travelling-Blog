@@ -22,7 +22,7 @@ X_Frame_Options = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['newsblog12.herokuapp.com', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://8000-gaganbehrh-newswebsite-yefpy2oyxyh.ws-eu86.gitpod.io']  # noqa
-
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Application definition
 
