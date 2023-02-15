@@ -15,13 +15,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_Frame_Options = 'SAMEORIGIN'
 
 
 ALLOWED_HOSTS = ['newsblog12.herokuapp.com', 'localhost']
-CSRF_TRUSTED_ORIGINS = ['https://8000-gaganbehrh-newswebsite-yefpy2oyxyh.ws-eu82.gitpod.io']  # noqa
+CSRF_TRUSTED_ORIGINS = ['https://8000-gaganbehrh-newswebsite-yefpy2oyxyh.ws-eu86.gitpod.io']  # noqa
 
 
 # Application definition
