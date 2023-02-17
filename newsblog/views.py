@@ -21,7 +21,7 @@ class PostView(generic.ListView):
     context_object_name = 'post_list'
     
 
-class AddView(CreateView):
+class AddView(CreateView):# add def get or post method to override form_valid indjango create view,override form view
     model = Post
     template_name = 'add.html'
     fields = '__all__'

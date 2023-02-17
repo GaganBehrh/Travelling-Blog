@@ -6,7 +6,7 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-class Post(models.Model):
+class Post(models.Model): #Add more methods and fields
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -32,7 +32,7 @@ class Post(models.Model):
         return self.likes.count()
 
 
-class Comment(models.Model):
+class Comment(models.Model): # add new fields and modeify the comenteither like or vote a comment
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
     name = models.CharField(max_length=80)
