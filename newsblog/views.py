@@ -6,6 +6,7 @@ from .models import Post
 from .forms import CommentForm
 from django.urls import reverse_lazy
 from django.core.mail import send_mail, BadHeaderError
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class PostList(generic.ListView):
@@ -13,20 +14,22 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
     paginate_by = 6
-
+    
 
 class PostView(generic.ListView):
     model = Post
     template_name = "post_view.html"
     context_object_name = 'post_list'
     
-
-class AddView(CreateView):# add def get or post method to override form_valid indjango create view,override form view
+#class AddView(LoginRequiredMixin,CreateView)
+class AddView(LoginRequiredMixin, CreateView):# add def get or post method to override form_valid in django create view,override form view
     model = Post
     template_name = 'add.html'
     fields = '__all__'
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('post_view')
+    #login_url = '/login/'
+    #redirect_field_name = 'redirect_to' # when not authenticated should go to index.html
    
    
 class TripCalculatorView(CreateView):
@@ -37,7 +40,7 @@ class TripCalculatorView(CreateView):
     success_url = reverse_lazy('tripcalculator')
 
 
-class EditView(UpdateView):
+class EditView(LoginRequiredMixin, UpdateView):
     model = Post
     template_name = 'edit.html'
     fields = '__all__'
@@ -45,7 +48,7 @@ class EditView(UpdateView):
     success_url = reverse_lazy('post_view')
 
 
-class Delete(DeleteView):
+class Delete(LoginRequiredMixin, DeleteView):
     model = Post
     template_name = 'delete.html'
     pk_url_kwarg = 'pk'
