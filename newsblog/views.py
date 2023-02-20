@@ -26,11 +26,15 @@ class PostView(generic.ListView):
 class AddView(LoginRequiredMixin, CreateView):# add def get or post method to override form_valid in django create view,override form view
     model = Post
     template_name = 'add.html'
-    fields = '__all__'
+    fields = ['title','author','featured_image','content','status','likes']
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('post_view')
-    #login_url = '/login/'
-    #redirect_field_name = 'redirect_to' # when not authenticated should go to index.html
+    #def form_valid(self, form):
+    #  #form.instance.author = self.request.user
+    # if form.is_valid():
+    # form.save()
+    # return redirect('blog')
+ 
    
    
 class TripCalculatorView(CreateView):
