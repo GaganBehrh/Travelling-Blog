@@ -21,12 +21,12 @@ class PostView(generic.ListView):
     template_name = "post_view.html"
     context_object_name = 'post_list'
 
- 
+
 #class AddView(LoginRequiredMixin,CreateView)
 class AddView(LoginRequiredMixin, CreateView):# add def get or post method to override form_valid in django create view,override form view
     model = Post
     template_name = 'add.html'
-    fields = ['title','author','featured_image','content','status','likes']
+    fields = ['title','author','slug','featured_image','content','status','likes']
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('post_view')
     #def form_valid(self, form):
