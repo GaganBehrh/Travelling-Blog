@@ -21,6 +21,7 @@ class PostView(generic.ListView):
     template_name = "post_view.html"
     context_object_name = 'post_list'
     
+    
 #class AddView(LoginRequiredMixin,CreateView)
 class AddView(LoginRequiredMixin, CreateView):# add def get or post method to override form_valid in django create view,override form view
     model = Post

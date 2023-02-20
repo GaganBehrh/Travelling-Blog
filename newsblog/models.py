@@ -28,6 +28,12 @@ class Post(models.Model): #Add more methods and fields
 
     def number_of_likes(self):
         return self.likes.count()
+        
+    #def get(self, *args, **kwargs):
+    # if request.user == self.person :
+    # super(Broadcast, self).get(*args, **kwargs)
+    # else :
+    # return none
 
 
 class Comment(models.Model): # add new fields and modeify the comenteither like or vote a comment
