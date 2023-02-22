@@ -7,6 +7,7 @@ from .forms import CommentForm
 from django.urls import reverse_lazy
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import ModelFormMixin
 
 
 class PostList(generic.ListView):
@@ -29,6 +30,13 @@ class AddView(LoginRequiredMixin, CreateView):# add def get or post method to ov
     fields = ['title','author','slug','featured_image','content','status','likes']
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('post_view')
+    
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.title = "Gaganpreet"
+        self.object.save()
+        return super(ModelFormMixin, self).form_valid(form)
+
     #def form_valid(self, form):
     #  #form.instance.author = self.request.user
     # if form.is_valid():
