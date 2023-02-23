@@ -23,7 +23,7 @@ class CommentAdmin(admin.ModelAdmin):
         queryset.update(approved=True)
 
 
-
+#migrations command;python manage.py makemigrations,python manage.py migrate
 
     
 

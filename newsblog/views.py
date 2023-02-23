@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import ModelFormMixin
+from django.shortcuts import render
 
 
 class PostList(generic.ListView):
@@ -37,14 +38,6 @@ class AddView(LoginRequiredMixin, CreateView):# add def get or post method to ov
         self.object.save()
         return super(ModelFormMixin, self).form_valid(form)
 
-    #def form_valid(self, form):
-    #  #form.instance.author = self.request.user
-    # if form.is_valid():
-    # form.save()
-    # return redirect('blog')
- 
-   
-   
 class TripCalculatorView(CreateView):
     model = Post
     template_name = 'tripcalculator.html'
@@ -134,4 +127,6 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-
+class contact_views(CreateView):
+    def post(request):
+        return render(request, 'contact.html')

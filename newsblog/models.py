@@ -46,11 +46,24 @@ class Comment(models.Model): # add new fields and modeify the comenteither like 
     approved = models.BooleanField(default=False)
   
     class Meta:
-        ordering = ["created_on"]
+        ordering = ["created_on"] 
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+    
+    def approve(self):
+        self.approved = True
+        self.save()
+    
 
 
-class TripCalculator(models.Model):
-    number_of_people = models.IntegerField(default=0) 
+#class TripCalculator(models.Model):
+ #   number_of_people = models.IntegerField(default=0) 
+
+class Contact(models.Model):
+    email = models.EmailField()
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
