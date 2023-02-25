@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect, HttpResponse
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, ContactForm
 from django.urls import reverse_lazy
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -128,5 +128,8 @@ class PostLike(View):
 
 
 class contact_views(CreateView):
-    def post(request):
-        return render(request, 'contact.html')
+  form = ContactForm()
+  context = {'form': form}
+
+  def get(self, request, *args, **kwargs):
+    return render(request, 'contact.html', context)
