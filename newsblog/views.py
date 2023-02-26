@@ -2,13 +2,14 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect, HttpResponse
-from .models import Post
+from .models import Post,Contact
 from .forms import CommentForm, ContactForm
 from django.urls import reverse_lazy
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import ModelFormMixin
 from django.shortcuts import render
+from django.views.generic.edit import FormView
 
 
 class PostList(generic.ListView):
@@ -127,45 +128,12 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-class contact_views(CreateView):
-    # form_class = ContactForm
-   # template_name = "contact.html"
-    def get(self, request, slug, *args, **kwargs):
-        queryset = Contact.objects.filter(status=1)
-        post = get_object_or_404(Contact, slug=slug)
+class contact_views(LoginRequiredMixin, FormView):
+    template_name = 'contact.html'
+    form_class = ContactForm
+    success_url = '/contact/'
 
-        return render(
-            request,
-            "contact.html",
-            {
-                "email": email,
-                "subject": subject,
-                "message": message,
-                "contact_form": ContactForm(),
-               
-            },
-        )
-    
-    def post(self, request, slug, *args, **kwargs):
-
-        queryset = Contact.objects.filter(status=1)
-        post = get_object_or_404(Contact, slug=slug)
-        contact_form = ContactForm(data=request.Contact)
-        if contact_form.is_valid():
-            contact_form.instance.email = request.user.email
-            contact_form.instance.name = request.user.name
-            ontact_form.instance.name = request.user.message
-           
-        else:
-            contact_form = ContactForm()
-
-        return render(
-            request,
-            "contact.html",
-            {
-                "email": email,
-                "subject": subject,
-                "message": message,
-                "contact_form": contact_form,
-            },
-        )
+    def form_valid(self, form):
+        form = form.save(commit=False)
+        form.save()
+        return super().form_valid(form)

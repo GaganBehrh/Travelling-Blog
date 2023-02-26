@@ -46,7 +46,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'tripcalculator' %}">Trip cost calculator</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
@@ -56,6 +58,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'add' %}">Add New</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
 
                     {% endif %}
