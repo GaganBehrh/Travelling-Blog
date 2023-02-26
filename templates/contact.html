@@ -2,10 +2,12 @@
 {% load crispy_forms_tags %}
 {% block content%}
 <div class="container pt-5">
-    <form action="" method="POST" class='w-100'>
-        {% csrf_token %}
-        {{ form|crispy }}
-        <input type="submit" value="Submit">
-    </form>
+    <div class='col-8'>
+        <form action="" method="POST" class='w-100'>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </div>
 {%endblock%}
