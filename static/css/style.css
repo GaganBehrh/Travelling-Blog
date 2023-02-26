@@ -141,9 +141,7 @@ body {
     border: none;
 }
 
-#id_email,
-#id_subject,
-#id_message {
+.contactcontainer {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
