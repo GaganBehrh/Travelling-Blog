@@ -131,7 +131,7 @@ class PostLike(View):
 class contact_views(LoginRequiredMixin, FormView):
     template_name = 'contact.html'
     form_class = ContactForm
-    success_url = '/contact/'
+    success_url = '/post_view/'
 
     def form_valid(self, form):
         form = form.save(commit=False)
