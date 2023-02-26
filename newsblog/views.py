@@ -93,7 +93,7 @@ class PostDetail(View):
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
-        comment_form = CommentForm(data=request.POST)
+        comment_form = CommentForm(data=request.Post)
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
@@ -130,9 +130,9 @@ class PostLike(View):
 class contact_views(CreateView):
     # form_class = ContactForm
    # template_name = "contact.html"
-    def get(self, request, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset)
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Contact.objects.filter(status=1)
+        post = get_object_or_404(Contact, slug=slug)
 
         return render(
             request,
@@ -141,19 +141,20 @@ class contact_views(CreateView):
                 "email": email,
                 "subject": subject,
                 "message": message,
-                "contact_form": contact_form,
+                "contact_form": ContactForm(),
                
             },
         )
     
-    def post(self, request, *args, **kwargs):
+    def post(self, request, slug, *args, **kwargs):
 
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset)
-        contact_form = ContactForm(data=request.POST)
+        queryset = Contact.objects.filter(status=1)
+        post = get_object_or_404(Contact, slug=slug)
+        contact_form = ContactForm(data=request.Contact)
         if contact_form.is_valid():
             contact_form.instance.email = request.user.email
-            contact_form.instance.name = request.user.username
+            contact_form.instance.name = request.user.name
+            ontact_form.instance.name = request.user.message
            
         else:
             contact_form = ContactForm()

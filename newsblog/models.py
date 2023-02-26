@@ -62,6 +62,7 @@ class Comment(models.Model): # add new fields and modeify the comenteither like 
 
 class Contact(models.Model):
     email = models.EmailField()
+    slug = models.SlugField(max_length=200, unique=True)
     subject = models.CharField(max_length=255)
     message = models.TextField()
 
