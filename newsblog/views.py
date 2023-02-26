@@ -128,8 +128,5 @@ class PostLike(View):
 
 
 class contact_views(CreateView):
-  form = ContactForm()
-  context = {'form': form}
-
-  def get(self, request, *args, **kwargs):
-    return render(request, 'contact.html', context)
+    form_class = ContactForm
+    template_name = "contact.html"
