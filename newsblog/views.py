@@ -128,5 +128,43 @@ class PostLike(View):
 
 
 class contact_views(CreateView):
-    form_class = ContactForm
-    template_name = "contact.html"
+    # form_class = ContactForm
+   # template_name = "contact.html"
+    def get(self, request, *args, **kwargs):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset)
+
+        return render(
+            request,
+            "contact.html",
+            {
+                "email": email,
+                "subject": subject,
+                "message": message,
+                "contact_form": contact_form,
+               
+            },
+        )
+    
+    def post(self, request, *args, **kwargs):
+
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset)
+        contact_form = ContactForm(data=request.POST)
+        if contact_form.is_valid():
+            contact_form.instance.email = request.user.email
+            contact_form.instance.name = request.user.username
+           
+        else:
+            contact_form = ContactForm()
+
+        return render(
+            request,
+            "contact.html",
+            {
+                "email": email,
+                "subject": subject,
+                "message": message,
+                "contact_form": contact_form,
+            },
+        )
