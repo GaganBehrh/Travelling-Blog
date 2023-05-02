@@ -54,12 +54,8 @@ class Comment(models.Model): # add new fields and modeify the comenteither like 
     def approve(self):
         self.approved = True
         self.save()
-    
 
-
-#class TripCalculator(models.Model):
- #   number_of_people = models.IntegerField(default=0) 
-
+        
 class Contact(models.Model):
     email = models.EmailField()
     subject = models.CharField(max_length=255)

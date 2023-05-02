@@ -25,7 +25,7 @@ class CommentAdmin(admin.ModelAdmin):
 
 admin.site.register(Contact)
 
-#migrations command;python manage.py makemigrations,python manage.py migrate
+
 
     
 

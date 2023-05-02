@@ -25,8 +25,8 @@ class PostView(generic.ListView):
     context_object_name = 'post_list'
 
 
-#class AddView(LoginRequiredMixin,CreateView)
-class AddView(LoginRequiredMixin, CreateView):# add def get or post method to override form_valid in django create view,override form view
+
+class AddView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add.html'
     fields = ['title','author','slug','featured_image','content','status','likes']
@@ -132,7 +132,18 @@ class contact_views(LoginRequiredMixin, FormView):
     template_name = 'contact.html'
     form_class = ContactForm
     success_url = '/post_view/'
+
     def form_valid(self, form):
         form = form.save(commit=False)
         form.save()
         return super().form_valid(form)
+
+    def contact_view(request):
+        if request.method == 'POST':
+            form = ContactForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return render(request, 'add.html')
+        form = ContactForm()
+        context = {'form': form}
+        return render(request, 'contact.html', context)
