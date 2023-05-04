@@ -87,7 +87,12 @@ No errors found
 
 
 #### JShint: 
-only warnings found
+There were initially following undefined variables as shown here
+![Jshint validation](static/media/Jshint%20validation%201.png)
+It was fixed in the following way
+![Jshint validation](static/media/Jshint%20validation%202.png)
+
+
 
 #### PEP8 Online: 
 No errors found

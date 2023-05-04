@@ -1,3 +1,10 @@
+// jshint esversion:6
+/* jshint node: true */
+/* global test */
+/* global beforeAll */
+/* global describe */
+/* global expect */
+
 const buttonClick = require("../ClickMe");
 beforeAll(() => {
     document.body.innerHTML = "<p id='par'></p>";
