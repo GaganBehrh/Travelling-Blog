@@ -12,14 +12,14 @@ from django.shortcuts import render
 from django.views.generic.edit import FormView
 
 
-class PostList(generic.ListView):
+class PostList(LoginRequiredMixin, generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
     paginate_by = 6
     
 
-class PostView(generic.ListView):
+class PostView(LoginRequiredMixin, generic.ListView):
     model = Post
     template_name = "post_view.html"
     context_object_name = 'post_list'
@@ -28,7 +28,7 @@ class PostView(generic.ListView):
 class AddView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add.html'
-    fields = ['title', 'author', 'slug', 'featured_image', 'content', 'status', 'likes']
+    fields = ['title', 'author', 'slug', 'featured_image', 'content', 'status','likes']
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('post_view')
     
@@ -39,7 +39,7 @@ class AddView(LoginRequiredMixin, CreateView):
         return super(ModelFormMixin, self).form_valid(form)
 
 
-class TripCalculatorView(CreateView):
+class TripCalculatorView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'tripcalculator.html'
     fields = '__all__'
@@ -62,7 +62,7 @@ class Delete(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('post_view')
 
 
-class PostDetail(View):
+class PostDetail(LoginRequiredMixin, View):
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -117,7 +117,7 @@ class PostDetail(View):
         )
 
 
-class PostLike(View):
+class PostLike(LoginRequiredMixin,View):
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():

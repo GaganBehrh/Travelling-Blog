@@ -3,7 +3,7 @@
 {% block content%}
 <div class="container pt-5">
     <div class='col-8'>
-        <form action="submit" method="POST" class='w-100'>
+        <form method="POST" class='w-100'>
             {% csrf_token %}
             {{ form|crispy }}
             <input type="submit" value="Submit">
