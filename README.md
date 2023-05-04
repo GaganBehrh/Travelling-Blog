@@ -80,6 +80,7 @@ Here is the model I used
 #### W3C HTML Validator -
 I used This HTML validator to ensure my code was legal.
 The only warnings were when the validator failed to recognise the Django template tags.
+The Django templates were checked found by going through View Page Source on the deployed website where we got rendered html and then was taken to the W3C validator and then the errors were checked no so no errors in these templates only warnings found
 
 #### W3C CSS Validator - 
 No errors found
