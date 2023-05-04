@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect, HttpResponse
-from .models import Post,Contact
+from .models import Post, Contact
 from .forms import CommentForm, ContactForm
 from django.urls import reverse_lazy
 from django.core.mail import send_mail, BadHeaderError
@@ -25,11 +25,10 @@ class PostView(generic.ListView):
     context_object_name = 'post_list'
 
 
-
 class AddView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add.html'
-    fields = ['title','author','slug','featured_image','content','status','likes']
+    fields = ['title', 'author', 'slug', 'featured_image', 'content', 'status', 'likes']
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('post_view')
     
@@ -38,6 +37,7 @@ class AddView(LoginRequiredMixin, CreateView):
         self.object.title = "Gaganpreet"
         self.object.save()
         return super(ModelFormMixin, self).form_valid(form)
+
 
 class TripCalculatorView(CreateView):
     model = Post
