@@ -27,13 +27,13 @@
                             <h2 class="card-title">{{post.title}}</h2>
                             <div class="btn-grp">
                                 <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                    <button type="button" class="btn btn-primary">View</button>
+                                    View
                                 </a>
                                 <a href="{% url 'edit' post.pk%}" class="post-link">
-                                    <button type="button" class="btn btn-primary">Edit</button>
+                                    Edit
                                 </a>
                                 <a href="{% url 'delete' post.pk %}" class="post-link">
-                                    <button type="button" class="btn btn-primary">Delete</button>
+                                    Delete
                                 </a>
                             </div>
                             <hr />
